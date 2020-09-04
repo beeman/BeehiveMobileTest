@@ -1,0 +1,28 @@
+query Uptime {
+  uptime
+}
+
+fragment UserDetails on User {
+  id
+  email
+  firstName
+  lastName
+}
+
+mutation Login($input: AuthLoginInput!) {
+  login(input: $input) {
+    token
+    user {
+      ...UserDetails
+    }
+  }
+}
+
+mutation Register($input: AuthRegisterInput!) {
+  register(input: $input) {
+    token
+    user {
+      ...UserDetails
+    }
+  }
+}

@@ -21,7 +21,8 @@
   },
   "scripts": {
     "ngcc": "ngcc --properties es2015 module main --first-only",
-    "postinstall": "npm run ngcc"
+    "postinstall": "npm run ngcc",
+    "sdk": "graphql-codegen --config codegen.yml"
   },
   "dependencies": {
     "@angular/animations": "~10.0.0",
@@ -32,19 +33,32 @@
     "@angular/platform-browser": "~10.0.0",
     "@angular/platform-browser-dynamic": "~10.0.0",
     "@angular/router": "~10.0.0",
+    "@apollo/client": "^3.1.4",
     "@nativescript/angular": "~10.0.0",
     "@nativescript/core": "~7.0.0",
     "@nativescript/theme": "~2.3.0",
+    "apollo-angular": "^2.0.4",
+    "graphql": "^15.3.0",
     "reflect-metadata": "~0.1.12",
     "rxjs": "^6.6.0",
     "zone.js": "~0.11.1"
   },
   "devDependencies": {
+    "@angular-devkit/schematics": "^10.1.0",
     "@angular/compiler-cli": "~10.0.0",
+    "@graphql-codegen/cli": "1.17.8",
+    "@graphql-codegen/introspection": "1.17.8",
+    "@graphql-codegen/typescript": "1.17.8",
+    "@graphql-codegen/typescript-apollo-angular": "2.0.1",
+    "@graphql-codegen/typescript-operations": "1.17.8",
     "@nativescript/ios": "7.0.0",
     "@nativescript/types": "~7.0.0",
     "@nativescript/webpack": "~3.0.0",
     "@ngtools/webpack": "~10.0.0",
+    "@schematics/angular": "^10.1.0",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.3.0",
+    "prettier": "^2.1.1",
     "typescript": "~3.9.0"
   },
   "gitHead": "3c1e356f5a73a8feb68acc40b3c7c02c9d18d7f0",

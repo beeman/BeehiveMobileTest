@@ -1,11 +1,16 @@
 import { Injectable } from "@angular/core";
+import { ApolloAngularSDK } from "../../sdk";
 
 import { Item } from "./item";
 
 @Injectable({
-    providedIn: "root"
+    providedIn: "root",
 })
 export class ItemService {
+    constructor(private readonly sdk: ApolloAngularSDK) {}
+    public getUptime() {
+        return this.sdk.uptime();
+    }
     private items = new Array<Item>(
         { id: 1, name: "Ter Stegen", role: "Goalkeeper" },
         { id: 3, name: "Piqué", role: "Defender" },
